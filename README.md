@@ -5,7 +5,4 @@ Thibault LADENT
 Benjamin REDANT
 <br/>
 Bastien FAUCHART
-</p>
-<br/>
 Corentin BERNARD
-</p>

@@ -1,5 +1,8 @@
-Journal de bord
+<strong>JOURNAL DE BORD</strong>
+<p>
 Thibault LADENT
-Mehdi MALAMELLI
+<br/>
 Benjamin REDANT
+<br/>
 Bastien FAUCHART
+</p>

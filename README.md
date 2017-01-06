@@ -8,4 +8,4 @@ Bastien FAUCHART
 <br/>
 Corentin BERNARD
 <br/>
-Mehdi Malamelli
+Mehdi MALAMELLI

@@ -7,4 +7,5 @@ Benjamin REDANT
 Bastien FAUCHART
 <br/>
 Corentin BERNARD
-</p>
+<br/>
+Mehdi Malamelli

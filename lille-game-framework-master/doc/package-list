@@ -1,0 +1,13 @@
+gameframework.assets
+gameframework.base
+gameframework.drawing
+gameframework.drawing.mocks
+gameframework.game
+gameframework.game.mocks
+gameframework.gui
+gameframework.motion
+gameframework.motion.blocking
+gameframework.motion.overlapping
+gameframework.motion.overlapping.mocks
+gameframework.particles
+gameframework.particles.behaviors

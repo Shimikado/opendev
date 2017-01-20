@@ -1,4 +1,4 @@
-<strong>JOURNAL DE BORD</strong>
+<h1><strong>JOURNAL DE BORD</strong></h1>
 <p>
 
 Thibault LADENT
@@ -10,9 +10,9 @@ Bastien FAUCHART
 Corentin BERNARD
 <br/>
 Mehdi MALAMELLI
-
+<br/>
 <strong>07/01</strong>
-<h1>Général</h1>
+<h2>Général</h2>
 <p>
 <ul>
 <li>Mise en place du Git</li>

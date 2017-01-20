@@ -23,12 +23,22 @@ Mehdi MALAMELLI
 </p>
 <br/>
 <br/>
-<h2><strong>07/01</strong></h2>
+<h2><strong>13/01</strong></h2>
 <h3>Général</h3>
 <p>
 <ul>
 <li>Utilisation d'un ancien projet <a href="https://github.com/arnaudcoj/l3s6_opendev_baladeva">Baladeva</a></li>
 <li>Framework plus facile à comprendre avec un projet déjà réalisé</li>
 <li>Réalisation d'un squelette de code avec une boucle de jeu infini avec background personnalisé</li>
+</ul>
+</p>
+<br/>
+<br/>
+<h2><strong>20/01</strong></h2>
+<h3>Général</h3>
+<p>
+<ul>
+<li>Béflexions approfondies sur notre projet de jeu</li>
+<li style="color:red">Brainstorming</li>
 </ul>
 </p>

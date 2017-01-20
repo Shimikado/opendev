@@ -11,8 +11,9 @@ Corentin BERNARD
 <br/>
 Mehdi MALAMELLI
 <br/>
-<strong>07/01</strong>
-<h2>Général</h2>
+<br/>
+<h2><strong>07/01</strong></h2>
+<h3>Général</h3>
 <p>
 <ul>
 <li>Mise en place du Git</li>

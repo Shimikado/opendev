@@ -41,4 +41,7 @@ Mehdi MALAMELLI
 <li>Béflexions approfondies sur notre projet de jeu</li>
 <li style="color:blue">Brainstorming</li>
 </ul>
+<ul>
+<li>Déplacement d'une entité sur le canvas</li>
+</ul>
 </p>

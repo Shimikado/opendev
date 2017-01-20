@@ -39,6 +39,6 @@ Mehdi MALAMELLI
 <p>
 <ul>
 <li>Béflexions approfondies sur notre projet de jeu</li>
-<li style="color:red">Brainstorming</li>
+<li style="color:red;">Brainstorming</li>
 </ul>
 </p>

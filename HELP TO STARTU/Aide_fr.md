@@ -17,7 +17,19 @@ Le Framework est composé en plusieurs packages, ayant chacun une fonctionnalit�
 
 ![Schéma du Framework](gameframework.png)
 
+### gameframework.base
 
+### gameframework.drawing
+
+### gameframework.game
+
+### gameframework.gui
+
+### gameframework.motion
+
+### gameframework.motion.blocking
+
+### gameframework.motion.overlapping
 
 
 

@@ -15,7 +15,7 @@ Le code d'un ![projet déjà réalisé](https://github.com/arnaudcoj/l3s6_opende
 Le Framework est composé en plusieurs packages, ayant chacun une fonctionnalité différente.
 
 
-![Schéma du Framework](gameframework.png)
+![Schéma du Framework](./gameframework.svg)
 
 
 

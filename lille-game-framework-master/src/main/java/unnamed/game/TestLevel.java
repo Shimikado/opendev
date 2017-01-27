@@ -2,7 +2,11 @@ package unnamed.game;
 
 import gameframework.drawing.GameUniverseViewPortDefaultImpl;
 import gameframework.game.GameData;
+
+import gameframework.game.GameEntity;
 import gameframework.game.GameLevelDefaultImpl;
+import unnamed.entities.PlayerTest;
+
 import unnamed.ressources.*;
 
 
@@ -19,6 +23,8 @@ public class TestLevel extends GameLevelDefaultImpl {
 	@Override
 	protected void init() {
 		this.gameBoard = new GameUniverseViewPortTest(this.data);
+
+		this.universe.addGameEntity(new PlayerTest(this.data,50,50));
 
 	}
 

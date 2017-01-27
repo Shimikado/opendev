@@ -10,8 +10,8 @@ public class GameMenuBar {
 
 	public MenuBar getComponent() {
 		MenuBar menuBar = new MenuBar();
-		Menu file = new Menu("file");
-		MenuItem quit = new MenuItem("quit");
+		Menu file = new Menu("File");
+		MenuItem quit = new MenuItem("Quit");
 		menuBar.add(file);
 
 		quit.addActionListener(new ActionListener() {

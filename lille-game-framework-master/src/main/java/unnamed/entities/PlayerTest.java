@@ -42,7 +42,7 @@ Overlappable, GameEntity, Drawable, KeyListener{
 		this.spriteSize = data.getConfiguration().getSpriteSize();
 		this.spriteManager = new SpriteManagerDefaultImpl(new DrawableImage(
 				"/images/doge.png", canvas), this.spriteSize, 1);
-		MoveStrategyKeyboard keyboard = new MoveStrategyKeyboard8Dir();
+		MoveStrategyKeyboard keyboard = new MoveStrategyKeyboard8Dir(false);
 		spriteManager.setTypes("static","les autres");
 		spriteManager.setType("static");
 		spriteManager.reset();

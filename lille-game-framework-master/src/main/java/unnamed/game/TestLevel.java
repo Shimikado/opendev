@@ -16,8 +16,8 @@ import unnamed.ressources.*;
  */
 public class TestLevel extends GameLevelDefaultImpl {
 
-	public TestLevel(GameData data) {
-		super(data);
+	public TestLevel(GameData data,int frameRate) {
+		super(data,frameRate);
 	}
 
 	@Override

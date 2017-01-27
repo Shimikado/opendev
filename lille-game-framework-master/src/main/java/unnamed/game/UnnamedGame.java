@@ -16,7 +16,7 @@ public class UnnamedGame extends  GameDefaultImpl{
 	 * Add all the levels on the game list
 	 */
 	public void initLevels() {
-		this.data.addLevel(new TestLevel(data));
+		this.data.addLevel(new TestLevel(data,20));
 	}
 
 	/**

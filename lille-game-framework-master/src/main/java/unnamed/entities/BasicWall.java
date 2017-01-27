@@ -20,7 +20,7 @@ public class BasicWall implements GameEntity, MoveBlocker, Drawable{
 
 	public BasicWall (GameData data,int posx, int posy){
 		this.canvas = data.getCanvas();
-		this.image=this.img("/images/pinkWall.png");
+		this.image=this.img("/images/dogeWall.png");
 		this.position=new Point(posx,posy);
 		
 	}

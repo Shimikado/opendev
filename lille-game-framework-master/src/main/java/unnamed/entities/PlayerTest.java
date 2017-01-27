@@ -50,6 +50,7 @@ Overlappable, GameEntity, Drawable, KeyListener{
 		
 		GameMovableDriverDefaultImpl moveDriver = new GameMovableDriverDefaultImpl();
 		moveDriver.setStrategy(keyboard);
+		moveDriver.setmoveBlockerChecker(data.getMoveBlockerChecker());
 		setDriver(moveDriver);
 		
 		

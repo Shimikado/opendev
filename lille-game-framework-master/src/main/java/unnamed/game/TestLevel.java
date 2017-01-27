@@ -5,6 +5,7 @@ import gameframework.game.GameData;
 
 import gameframework.game.GameEntity;
 import gameframework.game.GameLevelDefaultImpl;
+import unnamed.entities.BasicWall;
 import unnamed.entities.PlayerTest;
 
 import unnamed.ressources.*;
@@ -25,6 +26,7 @@ public class TestLevel extends GameLevelDefaultImpl {
 		this.gameBoard = new GameUniverseViewPortTest(this.data);
 
 		this.universe.addGameEntity(new PlayerTest(this.data,50,50));
+		this.universe.addGameEntity(new BasicWall(this.data,150,150));
 
 	}
 

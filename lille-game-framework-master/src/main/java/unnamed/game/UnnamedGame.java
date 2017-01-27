@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 
 import gameframework.game.*;
 import gameframework.gui.*;
+import unnamed.util.Configuration;
 
 public class UnnamedGame extends  GameDefaultImpl{
 	
@@ -26,7 +27,7 @@ public class UnnamedGame extends  GameDefaultImpl{
 	public static void main(String[] args) throws MalformedURLException {
 		
 
-		GameConfiguration conf= new GameConfiguration(20,40,32,8);
+		 Configuration conf = new Configuration(20,40,32,8);
 
 		
 		//T

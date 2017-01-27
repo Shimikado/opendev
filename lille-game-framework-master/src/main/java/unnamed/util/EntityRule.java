@@ -5,5 +5,4 @@ import unnamed.entities.BasicWall;
 import unnamed.entities.PlayerTest;
 
 public class EntityRule extends OverlapRulesApplierDefaultImpl {
-	
 }

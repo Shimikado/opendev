@@ -37,20 +37,23 @@ Overlappable, GameEntity, Drawable, KeyListener{
 	
 	public PlayerTest(GameData game,int x,int y){
 		super();
+		
 		this.canvas=game.getCanvas();
 		this.data=game;
 		this.spriteSize = data.getConfiguration().getSpriteSize();
-		this.spriteManager = new SpriteManagerDefaultImpl(new DrawableImage(
-				"/images/doge.png", canvas), this.spriteSize, 1);
-		MoveStrategyKeyboard keyboard = new MoveStrategyKeyboard8Dir(false);
+		this.spriteManager = new SpriteManagerDefaultImpl(new DrawableImage("/images/doge.png", canvas), this.spriteSize, 1);
+		
 		spriteManager.setTypes("static","les autres");
 		spriteManager.setType("static");
 		spriteManager.reset();
 		this.setPosition(new Point(x, y));
 		
+		MoveStrategyKeyboard keyboard = new MoveStrategyKeyboard8Dir(false);
 		GameMovableDriverDefaultImpl moveDriver = new GameMovableDriverDefaultImpl();
+		
 		moveDriver.setStrategy(keyboard);
 		moveDriver.setmoveBlockerChecker(data.getMoveBlockerChecker());
+		
 		setDriver(moveDriver);
 		
 		
@@ -98,8 +101,10 @@ Overlappable, GameEntity, Drawable, KeyListener{
 
 	@Override
 	public void draw(Graphics g) {
+		
 		spriteManager.draw(g,this.position );
 		this.setPosition(new Point((int)position.getX(),(int) position.getY()));
+		
 	}
 
 	@Override

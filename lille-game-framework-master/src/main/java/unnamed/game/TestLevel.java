@@ -1,5 +1,7 @@
 package unnamed.game;
 
+import java.awt.Point;
+
 import gameframework.drawing.GameUniverseViewPortDefaultImpl;
 import gameframework.game.GameData;
 
@@ -7,7 +9,7 @@ import gameframework.game.GameEntity;
 import gameframework.game.GameLevelDefaultImpl;
 import unnamed.entities.BasicWall;
 import unnamed.entities.PlayerTest;
-
+import unnamed.entities.ennemies.Cage;
 import unnamed.ressources.*;
 
 
@@ -20,19 +22,26 @@ public class TestLevel extends GameLevelDefaultImpl {
 	private int rows;
 	private int columns;
 	private int spriteSize;
+	protected PlayerTest player;
 
 	public TestLevel(GameData data,int frameRate) {
 		super(data,frameRate);
 		this.rows = this.data.getConfiguration().getNbRows();
 		this.columns = this.data.getConfiguration().getNbColumns();
 		this.spriteSize = this.data.getConfiguration().getSpriteSize();
+		
 	}
 
 	@Override
 	protected void init() {
 		this.gameBoard = new GameUniverseViewPortTest(this.data);
-
-		this.universe.addGameEntity(new PlayerTest(this.data,10*spriteSize,10*spriteSize));
+		this.player=new PlayerTest(this.data,10*spriteSize,10*spriteSize);
+		
+		
+		this.universe.addGameEntity(this.player);
+		System.out.println(this.player.getPosition().toString());
+		
+		this.universe.addGameEntity(new Cage(this.data,new Point(13*spriteSize,13*spriteSize),player.getPosition()));
 		
 		this.addWalls();
 

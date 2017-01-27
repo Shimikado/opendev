@@ -25,7 +25,9 @@ public class UnnamedGame extends  GameDefaultImpl{
 	 */
 	public static void main(String[] args) throws MalformedURLException {
 		
+
 		GameConfiguration conf= new GameConfiguration(20,40,32,8);
+
 		
 		//T
 		GameData data = new GameData(conf);
@@ -36,7 +38,9 @@ public class UnnamedGame extends  GameDefaultImpl{
 		
 		GameStatusBarElement<Integer> life = new GameStatusBarElement<Integer>("Life : ", data.getLife());
 			
+
 		GameWindow window = new GameWindow("Unnamed", data.getCanvas(),conf, life, score);
+
 			
 		window.createGUI();
 		game.start();

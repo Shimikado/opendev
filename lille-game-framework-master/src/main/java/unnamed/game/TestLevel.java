@@ -17,17 +17,43 @@ import unnamed.ressources.*;
  */
 public class TestLevel extends GameLevelDefaultImpl {
 
+	private int rows;
+	private int columns;
+	private int spriteSize;
+
 	public TestLevel(GameData data,int frameRate) {
 		super(data,frameRate);
+		this.rows = this.data.getConfiguration().getNbRows();
+		this.columns = this.data.getConfiguration().getNbColumns();
+		this.spriteSize = this.data.getConfiguration().getSpriteSize();
 	}
 
 	@Override
 	protected void init() {
 		this.gameBoard = new GameUniverseViewPortTest(this.data);
 
-		this.universe.addGameEntity(new PlayerTest(this.data,50,50));
-		this.universe.addGameEntity(new BasicWall(this.data,150,150));
+		this.universe.addGameEntity(new PlayerTest(this.data,10*spriteSize,10*spriteSize));
+		
+		this.addWalls();
 
 	}
+	
+	/**
+	 * Creates the side Walls and put them on the board.
+	 * (Makes a call to create<Left/Bottom/Right/Top>SideWall)
+	 */
+	private void addWalls() {
+		for (int i = 0; i < rows; i++)
+			universe.addGameEntity(new BasicWall(data, 0, i*spriteSize));
+		for (int i = 0; i < columns; i++)
+			universe.addGameEntity(new BasicWall(data, i*spriteSize,(rows-1)*spriteSize));
+		for (int i = rows; i > 0; i--)
+			universe.addGameEntity(new BasicWall(data,(columns-1)*spriteSize, i*spriteSize));
+		for (int i = columns; i > 0; i--)
+			universe.addGameEntity(new BasicWall(data, i*spriteSize, 0));
+	}
 
+
+
+	
 }

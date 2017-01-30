@@ -2,9 +2,10 @@ package levels;
 
 import java.util.Random;
 
+import entities.CatchThemBlueStar;
 import entities.CatchThemCatcher;
 import entities.CatchThemDeathBlock;
-import entities.CatchThemStar;
+import entities.CatchThemGreenStar;
 import entities.CatchThemWall;
 import gameframework.game.GameData;
 import gameframework.game.GameLevelDefaultImpl;
@@ -41,10 +42,20 @@ public class CatchThemLevel1 extends GameLevelDefaultImpl {
 	private void createRandomStar(){
 		Random rand = new Random();
 		int chanceCreation = rand.nextInt(100);
-		if(chanceCreation > 96){
+		int typeofStar = rand.nextInt(2);
+		if(chanceCreation > 95){
 			int speed = rand.nextInt(3)+2;
 			int positionX = rand.nextInt((columns-2)*spriteSize);
-			this.universe.addGameEntity(new CatchThemStar(data, positionX+1*spriteSize+1, 0, speed));
+			
+			switch(typeofStar){
+			case 0:
+				this.universe.addGameEntity(new CatchThemBlueStar(data, positionX+1*spriteSize+1, 0, speed));
+				break;
+				
+			default:
+				this.universe.addGameEntity(new CatchThemGreenStar(data, positionX+1*spriteSize+1, 0, speed));
+			}
+			
 		}
 	}
 	

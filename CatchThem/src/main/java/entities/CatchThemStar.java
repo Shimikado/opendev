@@ -14,7 +14,7 @@ import gameframework.motion.GameMovableDriverDefaultImpl;
 import gameframework.motion.MoveStrategyStraightLine;
 import gameframework.motion.overlapping.Overlappable;
 
-public class CatchThemStar extends GameMovable implements GameEntity, Overlappable, Drawable {
+public abstract class CatchThemStar extends GameMovable implements GameEntity, Overlappable, Drawable {
 	
 	private DrawableImage img;
 	private GameCanvas canvas;
@@ -25,11 +25,19 @@ public class CatchThemStar extends GameMovable implements GameEntity, Overlappab
 	public CatchThemStar(GameData data,int x,int y,int speed) {
 		this.data = data;
 		this.canvas = data.getCanvas();
-		this.img = new DrawableImage("/images/noteV.png", canvas);
+		this.img = new DrawableImage(imagePath(), canvas);
 		this.position = new Point(x,y);
 		this.speed = speed;
 		initMotion(data, new Point(x,y+1000));
 	}
+	
+	
+	/**
+	 * 
+	 * @return the path of the image used for the Star
+	 */
+	protected abstract String imagePath();
+	
 	
 	@Override
 	public Rectangle getBoundingBox() {

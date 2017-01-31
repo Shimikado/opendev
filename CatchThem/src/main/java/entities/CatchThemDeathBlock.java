@@ -14,6 +14,11 @@ import gameframework.motion.GameMovableDriverDefaultImpl;
 import gameframework.motion.MoveStrategyStraightLine;
 import gameframework.motion.overlapping.Overlappable;
 
+/**
+ * Deaths Blocks are the entities under the player. Whenever a star fall in, the player lose life(s)
+ * @author guntau
+ *
+ */
 public class CatchThemDeathBlock extends GameMovable implements GameEntity, Overlappable, Drawable {
 	
 	protected DrawableImage img;

@@ -6,12 +6,16 @@ import gameframework.gui.GameWindow;
 import utils.CatchThemConfiguration;
 
 /**
- * Hello world!
+ * Main Application used to start the game.
+ * This class contains the main used by Maven, among others
  *
  */
 public class App 
 {
-	
+	/**
+	 * main class
+	 * @param args not used here.
+	 */
     public static void main( String[] args )
     {
         CatchThemConfiguration config = new CatchThemConfiguration();

@@ -13,6 +13,11 @@ import gameframework.motion.GameMovable;
 import gameframework.motion.blocking.MoveBlocker;
 import gameframework.motion.overlapping.Overlappable;
 
+/**
+ * Walls on the left and the right of the level. They stop the Catcher from leaving the visible space
+ * @author guntau
+ *
+ */
 public class CatchThemWall extends GameMovable implements MoveBlocker, Drawable,Overlappable, GameEntity {
 
 	protected DrawableImage img;

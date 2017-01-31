@@ -11,6 +11,11 @@ import gameframework.game.GameData;
 import gameframework.game.GameLevelDefaultImpl;
 import utils.CatchThemUniverseViewPort;
 
+/**
+ * The Level 1 (and only level for now) of CatchThem. This level generate random stars falling at different speed from the top of the canvas.
+ * @author guntau
+ *
+ */
 public class CatchThemLevel1 extends GameLevelDefaultImpl {
 
 	protected int rows;
@@ -31,7 +36,10 @@ public class CatchThemLevel1 extends GameLevelDefaultImpl {
 		if(rows/2 != 0)
 			rows--;
 	}
-
+	
+	/**
+	 * Initiliaize the ViewPort and add the Catcher to the GameUniverse.
+	 */
 	@Override
 	protected void init() {
 		this.gameBoard = new CatchThemUniverseViewPort(data);
@@ -39,12 +47,15 @@ public class CatchThemLevel1 extends GameLevelDefaultImpl {
 		this.universe.addGameEntity(new CatchThemCatcher(data,(columns/2)*this.spriteSize,(rows-5)*this.spriteSize));
 	}
 	
+	/**
+	 * Might create a random star on the universe : Blue or Green, and speed between 3 and 5
+	 */
 	private void createRandomStar(){
 		Random rand = new Random();
 		int chanceCreation = rand.nextInt(100);
-		int typeofStar = rand.nextInt(2);
+		int typeofStar = rand.nextInt(3);
 		if(chanceCreation > 95){
-			int speed = rand.nextInt(3)+2;
+			int speed = rand.nextInt(2)+3;
 			int positionX = rand.nextInt((columns-2)*spriteSize);
 			
 			switch(typeofStar){
@@ -58,6 +69,7 @@ public class CatchThemLevel1 extends GameLevelDefaultImpl {
 			
 		}
 	}
+	
 	
 	@Override
 	public void run(){
@@ -88,10 +100,8 @@ public class CatchThemLevel1 extends GameLevelDefaultImpl {
 	private void createWalls(){
 		
 		for (int i = 0; i < rows; i=i+2){
-			//top wall useless here
-			//universe.addGameEntity(new CatchThemWall(data, i*spriteSize,0));
 			
-			//bottom wall
+			//bottom wall (DeathBlock)
 			universe.addGameEntity(new CatchThemDeathBlock(data, i*spriteSize,(rows-2)*spriteSize));
 		}
 		

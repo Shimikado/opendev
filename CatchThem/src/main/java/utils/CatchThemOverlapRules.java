@@ -7,6 +7,11 @@ import entities.CatchThemGreenStar;
 import entities.CatchThemWall;
 import gameframework.motion.overlapping.OverlapRulesApplierDefaultImpl;
 
+/**
+ * Overlap Rules of the Game
+ * @author guntau
+ *
+ */
 public class CatchThemOverlapRules extends OverlapRulesApplierDefaultImpl {
 
 	public void overlapRule(CatchThemGreenStar s,CatchThemCatcher c){

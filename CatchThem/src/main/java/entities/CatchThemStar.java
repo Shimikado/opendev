@@ -14,6 +14,11 @@ import gameframework.motion.GameMovableDriverDefaultImpl;
 import gameframework.motion.MoveStrategyStraightLine;
 import gameframework.motion.overlapping.Overlappable;
 
+/**
+ * Abstract class used for creating new Stars
+ * @author guntau
+ *
+ */
 public abstract class CatchThemStar extends GameMovable implements GameEntity, Overlappable, Drawable {
 	
 	private DrawableImage img;
@@ -46,6 +51,11 @@ public abstract class CatchThemStar extends GameMovable implements GameEntity, O
 		return rectangle;
 	}
 	
+	/**
+	 * Initilialize the fall of the star
+	 * @param data is the GameData
+	 * @param goal is the falling point
+	 */
 	private void initMotion(GameData data, Point goal) {
 		MoveStrategyStraightLine strat = new MoveStrategyStraightLine(this.position, goal);
 		strat.setSpeed(speed);
@@ -60,7 +70,9 @@ public abstract class CatchThemStar extends GameMovable implements GameEntity, O
 		this.canvas.drawImage(g, this.img.getImage(), this.position.x, this.position.y);
 	}
 
-	
+	/**
+	 * Remove this star from the canvas
+	 */
 	public void selfDestruct(){
 		this.data.getUniverse().removeGameEntity(this);
 	}

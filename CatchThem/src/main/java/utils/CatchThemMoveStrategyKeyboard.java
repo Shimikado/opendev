@@ -6,6 +6,12 @@ import java.awt.event.KeyEvent;
 import gameframework.motion.MoveStrategyConfigurableKeyboard;
 import gameframework.motion.SpeedVector;
 
+/**
+ * Move Strategy Keyboard, overridden from {@link MoveStrategyConfigurableKeyboard}
+ * Allows only left and right movement.
+ * @author guntau
+ *
+ */
 public class CatchThemMoveStrategyKeyboard extends MoveStrategyConfigurableKeyboard {
 		
 	

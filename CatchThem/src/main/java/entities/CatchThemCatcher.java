@@ -18,6 +18,12 @@ import gameframework.motion.GameMovableDriverDefaultImpl;
 import gameframework.motion.overlapping.Overlappable;
 import utils.CatchThemMoveStrategyKeyboard;
 
+/**
+ * The GameCatcher is the playable entity of this game. It can be moved on left and right, and can catch the falling stars to get points and
+ * potentially some bonuses
+ * @author guntau
+ *
+ */
 public class CatchThemCatcher extends GameMovable implements GameEntity, Overlappable,Drawable, KeyListener, Observer {
 
 	private DrawableImage img;
@@ -36,6 +42,9 @@ public class CatchThemCatcher extends GameMovable implements GameEntity, Overlap
 		
 	}
 	
+	/**
+	 * initialize the controls for the player, using CatchTHemMoveStrategyKeyboard
+	 */
 	private void initMotion() {
 		CatchThemMoveStrategyKeyboard keyboard = new CatchThemMoveStrategyKeyboard(false);
 		GameMovableDriverDefaultImpl moveDriver = new GameMovableDriverDefaultImpl();
@@ -49,6 +58,9 @@ public class CatchThemCatcher extends GameMovable implements GameEntity, Overlap
 		data.getLife().addObserver(this);
 	}
 
+	/**
+	 * increasse the score by 1
+	 */
 	public void oneMorePoint(){
 		this.data.getScore().setValue(this.data.getScore().getValue()+1);;
 	}
@@ -57,13 +69,19 @@ public class CatchThemCatcher extends GameMovable implements GameEntity, Overlap
 		return this.point;
 	}
 	
+	/**
+	 * return the "hitbox" of the player
+	 */
 	@Override
 	public Rectangle getBoundingBox() {
 		Rectangle rectangle = new Rectangle(this.img.getWidth(), this.img.getWidth());
 		rectangle.setLocation(position.x, position.y);
 		return rectangle;
 	}
-
+	
+	/**
+	 * Draw the character on the canvas
+	 */
 	@Override
 	public void draw(Graphics g) {
 		this.canvas.drawImage(g, this.img.getImage(), this.position.x, this.position.y);

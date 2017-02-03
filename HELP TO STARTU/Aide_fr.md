@@ -17,18 +17,30 @@ Le Framework est composé en plusieurs packages, ayant chacun une fonctionnalit�
 
 ![Schéma du Framework](gameframework.png)
 
+###![gameframework.assets](../lille-game-framework-master/src/main/java/gameframework/assets)
+
+Package proposant une unique classe permettant de gérer des sons. On peut les charger, les jouer, les stopper ou encore les boucler
+
 ###![gameframework.base](../lille-game-framework-master/src/main/java/gameframework/base)
-### gameframework.drawing
 
-### gameframework.game
+Ce package contient l'interface qui permet de déclarer des entités avec une hitbox: à noter que les collisions sont gérées avec :![gameframework.base](../lille-game-framework-master/src/main/java/gameframework/base)
 
-### gameframework.gui
 
-### gameframework.motion
+###![gameframework.drawing](../lille-game-framework-master/src/main/java/gameframework/drawing)
 
-### gameframework.motion.blocking
+###![gameframework.game](../lille-game-framework-master/src/main/java/gameframework/game)
 
-### gameframework.motion.overlapping
+###![gameframework.gui](../lille-game-framework-master/src/main/java/gameframework/gui)
+
+###![gameframework.motion](../lille-game-framework-master/src/main/java/gameframework/motion)
+
+###![gameframework.motion.blocking](../lille-game-framework-master/src/main/java/gameframework/motion/blocking)
+
+###![gameframework.motion.overlapping](../lille-game-framework-master/src/main/java/gameframework/motion/overlapping)
+
+###![gameframework.particles](../lille-game-framework-master/src/main/java/gameframework/motion/particles)
+
+###![gameframework.motion.particles.behavior](../lille-game-framework-master/src/main/java/gameframework/particles/behavior)
 
 
 

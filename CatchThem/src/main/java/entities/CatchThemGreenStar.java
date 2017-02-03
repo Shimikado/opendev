@@ -16,7 +16,7 @@ public class CatchThemGreenStar extends CatchThemStar {
 
 	@Override
 	protected String imagePath() {
-		return "/images/noteV.png";
+		return "/noteV.png";
 	}
 
 }

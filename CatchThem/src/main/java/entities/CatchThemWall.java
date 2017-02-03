@@ -29,7 +29,7 @@ public class CatchThemWall extends GameMovable implements MoveBlocker, Drawable,
 		// TODO Auto-generated constructor stub
 		this.canvas = data.getCanvas();
 		this.position = new Point(x,y);
-		this.img = new DrawableImage("/images/wall.png", canvas);
+		this.img = new DrawableImage("/wall.png", canvas);
 	}
 	
 	@Override

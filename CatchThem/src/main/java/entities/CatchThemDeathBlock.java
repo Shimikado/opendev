@@ -28,7 +28,7 @@ public class CatchThemDeathBlock extends GameMovable implements GameEntity, Over
 	
 	public CatchThemDeathBlock(GameData data,int x, int y) {
 		this.canvas = data.getCanvas();
-		this.img = new DrawableImage("/images/line.png", canvas);
+		this.img = new DrawableImage("/line.png", canvas);
 		this.position = new Point(x,y);
 		this.data = data;
 		initMotion();

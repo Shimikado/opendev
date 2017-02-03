@@ -36,7 +36,7 @@ public class CatchThemCatcher extends GameMovable implements GameEntity, Overlap
 		this.data = data;
 		this.canvas = data.getCanvas();
 		this.position = new Point(x,y);
-		this.img = new DrawableImage("/images/player.png", this.canvas);
+		this.img = new DrawableImage("/player.png", this.canvas);
 		this.point = 0;
 		initMotion();
 		

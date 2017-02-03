@@ -43,4 +43,12 @@ Mehdi MALAMELLI
 <li>Déplacement d'une entité sur le canvas</li>
 </ul>
 </p>
+<h2><strong>27/01</strong></h2>
+<h3>Général</h3>
+<p>
+<ul>
+<li>Avancement sur le développement d'un prototype</li>
+<li> Création d'une documentation générale et d'un tutoriel anglais/français pour une première approche sur le framework</li>
+</ul>
+</p>
 

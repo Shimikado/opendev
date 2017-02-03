@@ -67,7 +67,7 @@ Je vous conseille vivement de suivre les mêmes intitulés de package pour votre
 
 Nous allons donc commencer par créer une classe Game comme ceci :
 
-```
+```java
 package unnamed.game;
 
 import java.net.MalformedURLException;

@@ -51,5 +51,10 @@ Mehdi MALAMELLI
 <li> Création d'une documentation générale et d'un tutoriel anglais/français pour une première approche sur le framework</li>
 <li>Importation du framework mis à jour à partir du git de la classe </li> 
 </ul>
+<h2><strong>03/02</strong></h2>
+<h3>Général</h3>
+<ul>
+<li>Résolution du problème de trajectoire de l'ennemi : la position du joueur est défini par le framework, il ne fallait donc pas actualiser "à la main" la position du joueur via la fonction draw() dans PlayerTest.java </li>
+</ul>
 </p>
 

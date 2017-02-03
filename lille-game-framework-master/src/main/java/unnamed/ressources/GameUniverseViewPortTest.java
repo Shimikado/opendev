@@ -25,7 +25,7 @@ public class GameUniverseViewPortTest extends
 	@Override
 	protected URL backgroundImage() {
 
-		return backgroundImage("/images/background.png");
+		return backgroundImage("/images/back2.png");
 
 	}
 }

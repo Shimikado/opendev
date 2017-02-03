@@ -8,6 +8,7 @@ import gameframework.drawing.GameCanvas;
 import gameframework.drawing.SpriteManager;
 import gameframework.game.GameData;
 import gameframework.motion.MoveStrategy;
+import gameframework.motion.MoveStrategyRandom;
 import gameframework.motion.MoveStrategyStraightLine;
 import gameframework.motion.SpeedVector;
 import unnamed.entities.Enemy;
@@ -40,7 +41,8 @@ public class Cage extends Enemy{
 	}
 	@Override
 	protected MoveStrategy getMoveStrategy(Point pos, Point goal) {
-		return new MoveStrategyStraightLine(this.position,goal, 1);
+		//return new MoveStrategyStraightLine(this.position,goal,3);
+		return new MoveStrategyRandom();
 	}
 	
 

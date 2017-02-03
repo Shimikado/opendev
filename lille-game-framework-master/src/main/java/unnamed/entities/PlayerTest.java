@@ -73,7 +73,7 @@ Overlappable, GameEntity, Drawable, KeyListener{
 
 	//Permet de declarer un comportement  à l'entité
 	public void oneStepMoveAddedBehavior() {
-		this.data.getScore().setValue(this.data.getScore().getValue()+1);
+		
 	}
 
 	public void oneStepMove() {

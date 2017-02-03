@@ -42,6 +42,7 @@ public class BadCage extends Enemy{
 	}
 	@Override
 	protected MoveStrategy getMoveStrategy(Point pos, Point goal) {
+		//return new MoveStrategyAVC(this.position,goal,7);
 		return new MoveStrategyStraightRandom(this.position,goal,7);
 	}
 	

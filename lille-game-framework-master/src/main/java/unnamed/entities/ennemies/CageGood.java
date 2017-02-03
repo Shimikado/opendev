@@ -8,6 +8,7 @@ import gameframework.drawing.GameCanvas;
 import gameframework.drawing.SpriteManager;
 import gameframework.game.GameData;
 import gameframework.motion.MoveStrategy;
+import unnamed.motion.MoveStrategyAVC;
 import gameframework.motion.MoveStrategyRandom;
 import gameframework.motion.MoveStrategyStraightLine;
 import gameframework.motion.SpeedVector;
@@ -42,7 +43,8 @@ public class CageGood extends Enemy{
 	}
 	@Override
 	protected MoveStrategy getMoveStrategy(Point pos, Point goal) {
-		return new MoveStrategyStraightRandom(this.position,goal,7);
+		//return (MoveStrategy) new MoveStrategyAVC(this.position,goal,7);
+		return (MoveStrategy) new MoveStrategyStraightRandom(this.position,goal,7);
 	}
 	
 

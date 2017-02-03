@@ -40,7 +40,6 @@ public class UnnamedGame extends  GameDefaultImpl{
 		Game game = new UnnamedGame(data);
 		
 		GameStatusBarElement<Integer> score = new GameStatusBarElement<Integer>("Score : ", data.getScore());
-		
 		GameStatusBarElement<Integer> life = new GameStatusBarElement<Integer>("Life : ", data.getLife());
 			
 

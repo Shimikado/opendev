@@ -41,15 +41,9 @@ public class TestLevel extends GameLevelDefaultImpl {
 		
 		
 		this.universe.addGameEntity(this.player);
-		System.out.println(this.player.getPosition().toString());
 		
 		Random r = new Random();
-		for(int i=0; i<10;i++){
-			this.universe.addGameEntity(new BadCage(this.data,new Point((20+r.nextInt(5))*spriteSize,(10+r.nextInt(5))*spriteSize),player.getPosition()));
-		}
-		for(int i=0; i<5;i++){
-			this.universe.addGameEntity(new CageGood(this.data,new Point((20+r.nextInt(5))*spriteSize,(10+r.nextInt(5))*spriteSize),player.getPosition()));
-		}
+		this.universe.addGameEntity(new CageGood(this.data,new Point((20+r.nextInt(5))*spriteSize,(10+r.nextInt(5))*spriteSize),player.getPosition()));
 		
 		
 		this.addWalls();
@@ -64,9 +58,9 @@ public class TestLevel extends GameLevelDefaultImpl {
 		for (int i = 0; i < rows; i++)
 			universe.addGameEntity(new BasicWall(data, 0, i*spriteSize));
 		for (int i = 0; i < columns; i++)
-			universe.addGameEntity(new BasicWall(data, i*spriteSize,(rows-1)*spriteSize));
+			universe.addGameEntity(new BasicWall(data, i*spriteSize,(rows*30)-7));
 		for (int i = rows; i > 0; i--)
-			universe.addGameEntity(new BasicWall(data,(columns-1)*spriteSize, i*spriteSize));
+			universe.addGameEntity(new BasicWall(data,(columns*31)-8, i*spriteSize));
 		for (int i = columns; i > 0; i--)
 			universe.addGameEntity(new BasicWall(data, i*spriteSize, 0));
 	}

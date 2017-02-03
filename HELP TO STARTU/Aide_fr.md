@@ -3,7 +3,7 @@
 
 ##Partie 1 : Introduction
 
-Ce Framework vous permettra de créer des jeux, sans avoir à vous soucier d'éléments tierces, une fois qu'ils sont biens instanciés. Toutes les collisions par exemple sont géres par le Framework, une fois que vous déclarez des objets collisionnablesbles.
+Ce Framework vous permettra de créer des jeux, sans avoir à vous soucier d'éléments tierces, une fois qu'ils sont biens instanciés. Toutes les collisions par exemple sont géres par le Framework, une fois que vous déclarez des objets collisionnables.
 <br/>
 Il est assez compliqué à prendre en main, et c'est pour cela que ce mini tutoriel va vous aider à comprendre la base, pour créer votre premier prototype de jeu.
 

@@ -49,6 +49,7 @@ Mehdi MALAMELLI
 <ul>
 <li>Avancement sur le développement d'un prototype</li>
 <li> Création d'une documentation générale et d'un tutoriel anglais/français pour une première approche sur le framework</li>
+<li>Importation du framework mis à jour à partir du git de la classe </li> 
 </ul>
 </p>
 

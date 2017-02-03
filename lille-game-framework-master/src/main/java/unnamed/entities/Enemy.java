@@ -37,7 +37,7 @@ public abstract class Enemy extends GameMovable implements Overlappable, GameEnt
 		this.spriteSize = data.getConfiguration().getSpriteSize();
 	
 		DrawableImage img = new DrawableImage(this.imageLink(), canvas);
-		this.spriteManager = new SpriteManagerDefaultImpl(img, this.spriteSize,3);
+		this.spriteManager = new SpriteManagerDefaultImpl(img, this.spriteSize,1);
 		this.initSpriteManager();
 	
 		this.setPosition(pos);

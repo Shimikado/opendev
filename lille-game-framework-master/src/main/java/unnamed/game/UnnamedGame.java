@@ -1,12 +1,15 @@
 package unnamed.game;
 
 import java.net.MalformedURLException;
+import java.util.Observable;
 
 import gameframework.game.*;
 import gameframework.gui.*;
 import unnamed.util.Configuration;
 
 public class UnnamedGame extends  GameDefaultImpl{
+
+	private GameLevelDefaultImpl currentPlayedLevel = null;
 	
 	
 	public UnnamedGame(GameData data) {
@@ -18,6 +21,7 @@ public class UnnamedGame extends  GameDefaultImpl{
 	 */
 	public void init() {
 		this.data.addLevel(new TestLevel(data,20));
+		this.data.addLevel(new EndLevel(data,20));
 	}
 
 	/**
@@ -27,7 +31,7 @@ public class UnnamedGame extends  GameDefaultImpl{
 	public static void main(String[] args) throws MalformedURLException {
 		
 
-		 Configuration conf = new Configuration(20,40,32,8);
+		 Configuration conf = new Configuration(20,40,32,1);
 
 		
 		//T
@@ -45,6 +49,47 @@ public class UnnamedGame extends  GameDefaultImpl{
 			
 		window.createGUI();
 		game.start();
+	}
+	
+	@Override
+	public void start() {
+		for (GameLevel level : data.getLevels()) {
+			data.getEndOfGame().setValue(false);
+			
+			if (currentPlayedLevel != null && currentPlayedLevel.isAlive()) {
+				currentPlayedLevel.interrupt();
+				currentPlayedLevel = null;
+			}
+			currentPlayedLevel = (GameLevelDefaultImpl) level;
+			currentPlayedLevel.start();
+			try {
+				
+				currentPlayedLevel.join();
+			} catch (InterruptedException e) {
+				// that's ok, we just haven't finished sleeping
+			}
+		}
+	}
+	
+	public void update(Observable o, Object arg) {
+		
+		if (data.getEndOfGame().getValue() || data.getLife().getValue() <= 0) {
+			GameLevel end = this.finalScreen();
+			this.data.getEndOfGame().setValue(true);
+			this.data.getUniverse().removeAllGameEntities();
+			currentPlayedLevel = (GameLevelDefaultImpl) end;
+			currentPlayedLevel.start();
+			currentPlayedLevel.interrupt();
+			
+			
+			
+			
+			
+		}
+	}
+	
+	public GameLevel finalScreen(){
+		return this.data.getLevels().get(this.data.getLevels().size()-1);
 	}
 }
 	

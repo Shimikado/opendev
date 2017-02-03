@@ -2,6 +2,7 @@ package unnamed.game;
 
 import java.awt.Point;
 
+import gameframework.drawing.GameUniverseViewPort;
 import gameframework.drawing.GameUniverseViewPortDefaultImpl;
 import gameframework.game.GameData;
 
@@ -38,10 +39,13 @@ public class TestLevel extends GameLevelDefaultImpl {
 		this.player=new PlayerTest(this.data,10*spriteSize,10*spriteSize);
 		
 		
+		
 		this.universe.addGameEntity(this.player);
 		System.out.println(this.player.getPosition().toString());
 		
-		this.universe.addGameEntity(new Cage(this.data,new Point(13*spriteSize,13*spriteSize),player.getPosition()));
+		for(int i=0; i<100;i++){
+			this.universe.addGameEntity(new Cage(this.data,new Point(20*spriteSize,10*spriteSize),player.getPosition()));
+		}
 		
 		this.addWalls();
 
@@ -62,6 +66,9 @@ public class TestLevel extends GameLevelDefaultImpl {
 			universe.addGameEntity(new BasicWall(data, i*spriteSize, 0));
 	}
 
+	protected GameUniverseViewPort getViewPort(){
+		return this.gameBoard;
+	}
 
 
 	

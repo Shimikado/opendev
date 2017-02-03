@@ -20,6 +20,6 @@ public class CatchThemUniverseViewPort extends GameUniverseViewPortDefaultImpl {
 		 */
 		@Override
 		protected URL backgroundImage() {
-			return this.getClass().getResource("/images/background3.png");
+			return this.getClass().getResource("/background3.png");
 		}
 }

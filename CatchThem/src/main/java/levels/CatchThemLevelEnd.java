@@ -1,6 +1,5 @@
 package levels;
 
-import entities.CatchThemCatcher;
 import gameframework.game.GameData;
 import gameframework.game.GameLevelDefaultImpl;
 import utils.CatchThemUniverseViewPortEnd;

@@ -18,7 +18,7 @@ public class CatchThemBlueStar extends CatchThemStar {
 	@Override
 	protected String imagePath() {
 		// TODO Auto-generated method stub
-		return "/images/noteB.png";
+		return "/noteB.png";
 	}
 
 }

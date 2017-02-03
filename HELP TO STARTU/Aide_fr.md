@@ -142,8 +142,4 @@ public class UnnamedGame extends  GameDefaultImpl{
 ```
 
 
-
-
-```bash
-$ mvn test
-```
+*explication du code bla bla*

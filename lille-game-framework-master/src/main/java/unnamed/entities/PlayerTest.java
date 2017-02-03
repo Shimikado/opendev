@@ -103,15 +103,12 @@ Overlappable, GameEntity, Drawable, KeyListener{
 	public void draw(Graphics g) {
 		
 		spriteManager.draw(g,this.position );
-		this.setPosition(new Point((int)position.getX(),(int) position.getY()));
 		
 	}
 
 	@Override
 	public void update(Observable o, Object arg) {
-		
 	}
-	
 	
 
 }

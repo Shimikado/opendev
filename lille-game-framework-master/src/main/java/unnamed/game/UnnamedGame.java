@@ -11,12 +11,12 @@ public class UnnamedGame extends  GameDefaultImpl{
 	
 	public UnnamedGame(GameData data) {
 		super(data);
-		this.initLevels();
+		this.init();
 	}	
 	/**
 	 * Add all the levels on the game list
 	 */
-	public void initLevels() {
+	public void init() {
 		this.data.addLevel(new TestLevel(data,20));
 	}
 
@@ -66,3 +66,4 @@ public class UnnamedGame extends  GameDefaultImpl{
 	Game.start(Nouvelle classe de game)  <-- lancer les observer les objets en mouvement etc etc et laisser faire les boucles de dessin(  ), et de mouvement (),
 	(LANCER BOUCLE)
 	*/
+

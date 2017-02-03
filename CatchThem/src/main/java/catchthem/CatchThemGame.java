@@ -4,6 +4,7 @@ import gameframework.game.Game;
 import gameframework.game.GameData;
 import gameframework.game.GameDefaultImpl;
 import levels.CatchThemLevel1;
+import levels.CatchThemLevelEnd;
 
 /**
  * Game class used to create and start a game.
@@ -28,6 +29,7 @@ public class CatchThemGame extends GameDefaultImpl implements Game {
 	 */
 	private void init(){
 		this.data.addLevel(new CatchThemLevel1(data));
+		this.data.addLevel(new CatchThemLevelEnd(data));
 	}
 	
 }

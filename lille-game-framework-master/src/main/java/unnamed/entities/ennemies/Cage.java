@@ -40,7 +40,7 @@ public class Cage extends Enemy{
 	}
 	@Override
 	protected MoveStrategy getMoveStrategy(Point pos, Point goal) {
-		return new MoveStrategyStraightLine(this.position,goal, 10);
+		return new MoveStrategyStraightLine(this.position,goal, 1);
 	}
 	
 

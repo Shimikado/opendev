@@ -26,10 +26,8 @@ Package proposant une unique classe permettant de gérer des sons. On peut les c
 
 
 Ce package contient :
-* l'interface![ObjectWithBoundedBox](../lille-game-framework-master/src/main/java/gameframework/base/ObjectWithBoundedBox.java)qui permet de déclarer des entités avec une hitbox: à noter que les collisions sont gérées avec une boucle directement intégrée et les collisions déclenchent des  :![gameframework.motion.overlapping.OverlapRulesApplier](../lille-game-framework-master/src/main/java/gameframework/motion/overlapping/OverlapRulesApplier.java). C'est donc à vous de créer des règles de collisions entre les objets que vous voulez <strong>et de pouvoir rentre  votre jeu interactif</strong>.
-* La classe:![ObservableValue](../lille-game-framework-master/src/main/java/gameframework/base/ObservableValue.java)<p> qui permet de lancer des actions lorsqu'une variable désirée change de valeur (on peut l'utiliser pour faire un compteur de vie ou de score par exemple).
-
-
+* l'interface ![ObjectWithBoundedBox](../lille-game-framework-master/src/main/java/gameframework/base/ObjectWithBoundedBox.java) qui permet de déclarer des entités avec une hitbox: à noter que les collisions sont gérées avec une boucle directement intégrée et les collisions déclenchent des  :! [gameframework.motion.overlapping.OverlapRulesApplier](../lille-game-framework-master/src/main/java/gameframework/motion/overlapping/OverlapRulesApplier.java).  C'est donc à vous de créer des règles de collisions entre les objets que vous voulez *pour de pouvoir rentre  votre jeu interactif*.
+* La classe : ![ObservableValue](../lille-game-framework-master/src/main/java/gameframework/base/ObservableValue.java) qui permet de lancer des actions lorsqu'une variable désirée change de valeur (on peut l'utiliser pour faire un compteur de vie ou de score par exemple).
 
 ###![gameframework.drawing](../lille-game-framework-master/src/main/java/gameframework/drawing)
 

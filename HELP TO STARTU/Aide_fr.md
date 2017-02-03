@@ -17,8 +17,7 @@ Le Framework est composé en plusieurs packages, ayant chacun une fonctionnalit�
 
 ![Schéma du Framework](gameframework.png)
 
-### gameframework.base
-
+###![gameframework.base](../lille-game-framework-master/src/main/java/gameframework/base)
 ### gameframework.drawing
 
 ### gameframework.game

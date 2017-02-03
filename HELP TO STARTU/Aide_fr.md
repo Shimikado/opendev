@@ -1,6 +1,3 @@
-#Aide
-![Help sur le markdown](https://openclassrooms.com/courses/redigez-en-markdown)
-
 ##Partie 1 : Introduction
 
 Ce Framework vous permettra de créer des jeux, sans avoir à vous soucier d'éléments tierces, une fois qu'ils sont biens instanciés. Toutes les collisions par exemple sont géres par le Framework, une fois que vous déclarez des objets collisionnables.
@@ -31,47 +28,118 @@ Ce package contient :
 
 ###![gameframework.drawing](../lille-game-framework-master/src/main/java/gameframework/drawing)
 
-<p>
+bla bla
 
-</p>
 ###![gameframework.game](../lille-game-framework-master/src/main/java/gameframework/game)
 
-<p>
+bla bla
 
-</p>
 ###![gameframework.gui](../lille-game-framework-master/src/main/java/gameframework/gui)
 
-<p>
+bla bla
 
-</p>
 ###![gameframework.motion](../lille-game-framework-master/src/main/java/gameframework/motion)
 
-<p>
+bla bla
 
-</p>
 ###![gameframework.motion.blocking](../lille-game-framework-master/src/main/java/gameframework/motion/blocking)
 
-<p>
+bla bla
 
-</p>
 ###![gameframework.motion.overlapping](../lille-game-framework-master/src/main/java/gameframework/motion/overlapping)
 
-<p>
+bla bla
 
-</p>
 ###![gameframework.particles](../lille-game-framework-master/src/main/java/gameframework/motion/particles)
 
-<p>
+bla bla
 
-</p>
 ###![gameframework.motion.particles.behavior](../lille-game-framework-master/src/main/java/gameframework/particles/behavior)
 
-<p>
-
-</p>
+bla bla
 
 
+## Partie 3: implémentation d'un cas de base
 
+Pour votre première implémentation, commencez par créer un nouveau projet et importez ensuite le ![framework](https://github.com/Lille1-OpenDevs/lille-game-framework) à votre buildpath.
+
+Je vous conseille vivement de suivre les mêmes intitulés de package pour votre projet, ça pourrait vous être utile pour la suite.
+
+Nous allons donc commencer par créer une classe Game comme ceci :
+
+```
+package unnamed.game;
+
+import java.net.MalformedURLException;
+import java.util.Observable;
+
+import gameframework.game.*;
+import gameframework.gui.*;
+import unnamed.util.Configuration;
+
+// On hérite d'un GameDefaultImpl, n'hésitez pas à regarder le code pour voir comment fonctionnent  les boucles de jeu etc
+public class UnnamedGame extends  GameDefaultImpl{
+
+	private GameLevelDefaultImpl currentPlayedLevel = null;
+
+	public UnnamedGame(GameData data) {
+		super(data);
+		this.init();
+	}
+
+	/**
+	 * Add all the levels on the game list
+	 */
+	public void init() {
+		this.data.addLevel(new TestLevel(data,20));
+	}
+
+	/**
+	 * @param args not use here
+	 * @throws MalformedURLException
+	 */
+	public static void main(String[] args) throws MalformedURLException {
+
+
+        Configuration conf = new Configuration(20,40,32,1);
+
+		GameData data = new GameData(conf);
+
+		Game game = new UnnamedGame(data);
+
+		GameStatusBarElement<Integer> score = new GameStatusBarElement<Integer>("Score : ", data.getScore());
+
+		GameStatusBarElement<Integer> life = new GameStatusBarElement<Integer>("Life : ", data.getLife());
+
+
+		GameWindow window = new GameWindow("Unnamed", data.getCanvas(),conf, life, score);
+
+
+		window.createGUI();
+		game.start();
+	}
+
+	@Override
+	public void start() {
+		for (GameLevel level : data.getLevels()) {
+			data.getEndOfGame().setValue(false);
+
+			if (currentPlayedLevel != null && currentPlayedLevel.isAlive()) {
+				currentPlayedLevel.interrupt();
+				currentPlayedLevel = null;
+			}
+			currentPlayedLevel = (GameLevelDefaultImpl) level;
+			currentPlayedLevel.start();
+			try {
+
+				currentPlayedLevel.join();
+			} catch (InterruptedException e) {
+				// that's ok, we just haven't finished sleeping
+			}
+		}
+	}
+}
+```
 
 
 

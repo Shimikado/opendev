@@ -1,16 +1,16 @@
 package unnamed.game;
 
 import java.awt.Point;
+import java.util.Random;
 
 import gameframework.drawing.GameUniverseViewPort;
-import gameframework.drawing.GameUniverseViewPortDefaultImpl;
 import gameframework.game.GameData;
 
-import gameframework.game.GameEntity;
 import gameframework.game.GameLevelDefaultImpl;
 import unnamed.entities.BasicWall;
 import unnamed.entities.PlayerTest;
-import unnamed.entities.ennemies.Cage;
+import unnamed.entities.ennemies.BadCage;
+import unnamed.entities.ennemies.CageGood;
 import unnamed.ressources.*;
 
 
@@ -43,9 +43,14 @@ public class TestLevel extends GameLevelDefaultImpl {
 		this.universe.addGameEntity(this.player);
 		System.out.println(this.player.getPosition().toString());
 		
-		for(int i=0; i<100;i++){
-			this.universe.addGameEntity(new Cage(this.data,new Point(20*spriteSize,10*spriteSize),player.getPosition()));
+		Random r = new Random();
+		for(int i=0; i<10;i++){
+			this.universe.addGameEntity(new BadCage(this.data,new Point((20+r.nextInt(5))*spriteSize,(10+r.nextInt(5))*spriteSize),player.getPosition()));
 		}
+		for(int i=0; i<5;i++){
+			this.universe.addGameEntity(new CageGood(this.data,new Point((20+r.nextInt(5))*spriteSize,(10+r.nextInt(5))*spriteSize),player.getPosition()));
+		}
+		
 		
 		this.addWalls();
 

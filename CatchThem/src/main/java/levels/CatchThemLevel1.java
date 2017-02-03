@@ -25,7 +25,7 @@ public class CatchThemLevel1 extends GameLevelDefaultImpl {
 	
 	
 	public CatchThemLevel1(GameData data) {
-		super(data,40);
+		super(data,20);
 		this.rows = this.data.getConfiguration().getNbRows();
 		this.columns = this.data.getConfiguration().getNbColumns();
 		this.spriteSize = this.data.getConfiguration().getSpriteSize();

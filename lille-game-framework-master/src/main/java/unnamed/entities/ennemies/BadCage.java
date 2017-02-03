@@ -13,10 +13,11 @@ import gameframework.motion.MoveStrategyStraightLine;
 import gameframework.motion.SpeedVector;
 import unnamed.entities.Enemy;
 import unnamed.entities.PlayerTest;
+import unnamed.motion.MoveStrategyStraightRandom;
 
 
 
-public class Cage extends Enemy{
+public class BadCage extends Enemy{
 	protected Random rand = new Random();
 	protected int nbStep = 3;
 	protected int currentNbStep = 0;
@@ -31,18 +32,17 @@ public class Cage extends Enemy{
 	private int scorePoints;
 	
 	
-	public Cage(GameData data, Point pos, Point goal) {
+	public BadCage(GameData data, Point pos, Point goal) {
 		super(data, pos, goal);
 		this.scorePoints = 1000000 ;
 		}
 	@Override
 	protected String imageLink() {
-		return "/images/cage.png";
+		return "/images/redcage.png";
 	}
 	@Override
 	protected MoveStrategy getMoveStrategy(Point pos, Point goal) {
-		//return new MoveStrategyStraightLine(this.position,goal,3);
-		return new MoveStrategyRandom();
+		return new MoveStrategyStraightRandom(this.position,goal,7);
 	}
 	
 
